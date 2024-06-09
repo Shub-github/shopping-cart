@@ -7,12 +7,12 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <div>
-      <div>
+      <div className="bg-slate-900">
         <Navbar />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
