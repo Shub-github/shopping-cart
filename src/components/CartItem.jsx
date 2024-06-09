@@ -15,7 +15,7 @@ const CartItem = ({ item, itemIndex }) => {
     <div>
       <div>
         <div>
-          <img src={item.image} alt="product-image" />
+          <img src={item.image} />
         </div>
         <div>
           <h1>{item.title}</h1>
