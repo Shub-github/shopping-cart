@@ -39,9 +39,11 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="flex flex-col h-screen justify-center items-center">
           <h1>Cart Empty!!</h1>
-          <NavLink to="/">Shop Now</NavLink>
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border rounded">
+            <NavLink to="/">Shop Now</NavLink>
+          </button>
         </div>
       )}
     </div>
