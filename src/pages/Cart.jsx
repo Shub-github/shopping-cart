@@ -19,28 +19,31 @@ const Cart = () => {
   return (
     <div>
       {cart.length > 0 ? (
-        <div>
-          <div>
+        <div className="p-4 space-y-4">
+          <div className="space-y-2">
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
 
-          <div>
-            <div>Your Cart</div>
-            <div>Summary</div>
-            <p>
-              <span>Total Item:{cart.length}</span>
+          <div className="bg-gray-100 p-4 rounded-md">
+            <div className="text-lg font-semibold">Your Cart</div>
+            <div className="text-sm text-gray-600">Summary</div>
+            <p className="mt-2">
+              <span>Total Items: {cart.length}</span>
             </p>
           </div>
 
-          <div>
-            <p>Total amount :${totalAmount}</p>
+          <div className="bg-gray-100 p-4 rounded-md">
+            <p className="text-lg font-semibold">
+              Total amount:{" "}
+              <span className="text-green-500">${totalAmount}</span>
+            </p>
           </div>
         </div>
       ) : (
         <div className="flex flex-col h-screen justify-center items-center">
-          <h1>Cart Empty!!</h1>
+          <h1 className="text-2xl font-bold mb-4">Cart Empty!!</h1>
           <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border rounded">
             <NavLink to="/">Shop Now</NavLink>
           </button>
